@@ -1,201 +1,20 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
-/* ===========================
-   1. Base Normalize Styles
-=========================== */
-
-/* Improve text rendering and prevent iOS zooming */
-html {
-  line-height: 1.15; /* Consider 1.5 for better readability */
-  -webkit-text-size-adjust: 100%;
-}
-
-/* Remove default body margin */
-body {
-  margin: 0;
-}
-
-/* HTML5 elements display */
-main {
-  display: block;
-}
-
-/* Headings */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/* Horizontal rules */
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-
-/* Preformatted text */
-pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-/* Links */
-a {
-  background-color: transparent;
-}
-
-/* Abbreviations */
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline dotted;
-}
-
-/* Bold text */
-b,
-strong {
-  font-weight: bolder;
-}
-
-/* Code and keyboard input */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-/* Small text */
-small {
-  font-size: 80%;
-}
-
-/* Subscript and superscript */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sub {
-  bottom: -0.25em;
-}
-sup {
-  top: -0.5em;
-}
-
-/* Images */
-img {
-  border-style: none;
-}
-
-/* Form elements inherit font */
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1;
-}
-
-/* Remove focus outline (replace with custom focus style for accessibility) */
-button:focus,
-select:focus,
-textarea:focus {
-  outline: 0;
-}
-
-/* Placeholder styling */
-button::-webkit-input-placeholder,
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: #6b7280; /* Gray tone */
-}
-
-/* Labels and inputs */
-label {
-  display: block;
-}
-input,
-select,
-textarea {
-  display: block;
-  box-sizing: border-box;
-}
-
-/* ===========================
-   2. Custom Utility Classes
-=========================== */
-
-/* Glass effect */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Layout */
-.min-h-screen { min-height: 100vh; }
-.flex { display: flex; }
-.flex-col { flex-direction: column; }
-.items-center { align-items: center; }
-
-/* Spacing */
-.p-6 { padding: 1.5rem; }
-.p-3 { padding: 0.75rem; }
-.mb-8 { margin-bottom: 2rem; }
-.mb-2 { margin-bottom: 0.5rem; }
-
-/* Width */
-.w-full { width: 100%; }
-.max-w-md { max-width: 28rem; }
-
-/* Backgrounds */
-.bg-gradient-to-b {
-  background-image: linear-gradient(to bottom, #f9fafb, #e5e7eb);
-}
-.bg-white\/50 {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-/* Typography */
-.font-sans {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-.font-semibold { font-weight: 600; }
-.font-medium { font-weight: 500; }
-
-.text-4xl { font-size: 2.25rem; }
-.text-lg { font-size: 1.125rem; }
-
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgba(17, 24, 39, var(--tw-text-opacity));
-}
-.text-gray-800 {
-  --tw-text-opacity: 1;
-  color: rgba(31, 41, 55, var(--tw-text-opacity));
-}
-
-/* Borders */
-.rounded-2xl { border-radius: 1rem; }
-
 /* ===========================
    Custom Enhancements
 =========================== */
 
 /* Glass effect refinement */
 .glass {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(12px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  border-radius: 1rem; /* Smooth corners */
 }
 
-/* Smooth hover transition for interactive elements */
-button, .glass, .card {
+/* Smooth transitions for interactive elements */
+button,
+.glass,
+.card {
   transition: all 0.3s ease;
 }
 
@@ -205,15 +24,19 @@ button, .glass, .card {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Custom focus ring */
-input:focus, textarea:focus, select:focus {
+/* Custom focus rings for better accessibility */
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Tailwind blue-500 */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Tailwind blue-500 glow */
+  border-color: #3b82f6;
 }
 
 /* Typography tweaks */
 h1, h2, h3 {
   letter-spacing: -0.5px;
+  font-weight: 600;
 }
 p {
   line-height: 1.6;
@@ -225,9 +48,9 @@ p {
   font-style: italic;
 }
 
-/* Button hover states (override Tailwind for extra polish) */
+/* Button hover states (override Tailwind for smoother look) */
 .bg-blue-500:hover {
-  background-color: #2563eb !important; /* Slightly darker */
+  background-color: #2563eb !important; /* Slightly darker blue */
 }
 .bg-green-500:hover {
   background-color: #15803d !important;
@@ -236,4 +59,18 @@ p {
   background-color: #6b21a8 !important;
 }
 
+/* Add subtle hover scale for buttons */
+button:hover {
+  transform: scale(1.03);
+}
+button:active {
+  transform: scale(0.97);
+}
 
+/* Smooth transition for background and colors */
+button,
+input,
+textarea,
+select {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}

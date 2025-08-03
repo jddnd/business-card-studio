@@ -1,100 +1,85 @@
-/* ===========================
-   Custom Enhancements
-=========================== */
 
-/* Glass effect refinement */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html { line-height: 1.15; -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+main { display: block; }
+h1 { font-size: 2em; margin: 0.67em 0; }
+hr { box-sizing: content-box; height: 0; overflow: visible; }
+pre, code, kbd, samp { font-family: monospace, monospace; font-size: 1em; }
+a { background-color: transparent; }
+abbr[title] { border-bottom: none; text-decoration: underline dotted; }
+b, strong { font-weight: bolder; }
+small { font-size: 80%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+img { border-style: none; }
+button, input, optgroup, select, textarea {
+  font-family: inherit; font-size: 100%; line-height: 1;
+}
+button:focus, select:focus, textarea:focus { outline: 0; }
+button::-webkit-input-placeholder,
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder { color: #6b7280; }
+label, input, select, textarea { display: block; box-sizing: border-box; }
+
+/* Custom Styles */
 .glass {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(12px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
-  border-radius: 1rem; /* Smooth corners */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Smooth transitions for interactive elements */
-button,
-.glass,
-.card {
-  transition: all 0.3s ease;
-}
-
-/* Hover effect for cards */
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* Custom focus rings for better accessibility */
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Tailwind blue-500 glow */
-  border-color: #3b82f6;
-}
-
-/* Typography tweaks */
-h1, h2, h3 {
-  letter-spacing: -0.5px;
-  font-weight: 600;
-}
-p {
-  line-height: 1.6;
-}
-
-/* Placeholder styling */
-::placeholder {
-  color: rgba(75, 85, 99, 0.8); /* Tailwind gray-600 */
-  font-style: italic;
-}
-
-
-
-/* Add subtle hover scale for buttons */
-button:hover {
-  transform: scale(1.03);
-}
-button:active {
-  transform: scale(0.97);
-}
-
-/* Smooth transition for background and colors */
-button,
-input,
-textarea,
-select {
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Animated background */
+/* Layout and Spacing */
+.min-h-screen { min-height: 100vh; }
 .animated-bg {
-  background: linear-gradient(120deg, #eff6ff, #eef2ff, #ffffff);
-  background-size: 400% 400%;
-  animation: gradientShift 12s ease infinite;
+  background: linear-gradient(45deg, #e0e7ff, #f9fafb, #d1fae5);
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
 }
-@keyframes gradientShift {
+@keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+.p-6 { padding: 1.5rem; }
+.p-3 { padding: 0.75rem; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.space-y-4 > * + * { margin-top: 1rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.w-full { width: 100%; }
+.max-w-md { max-width: 28rem; }
+.rounded-xl { border-radius: 0.75rem; }
+.rounded-2xl { border-radius: 1rem; }
 
-/* Gradient button with glow */
+/* Typography */
+.text-4xl { font-size: 2.25rem; }
+.text-lg { font-size: 1.125rem; }
+.font-sans {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.font-medium { font-weight: 500; }
+.font-bold { font-weight: 700; }
+.text-gray-800 { color: rgba(31, 41, 55, 1); }
+.text-gray-200 { color: rgba(229, 231, 235, 1); }
+.text-transparent { color: transparent; }
+.text-gray-100 { color: rgba(243, 244, 246, 1); }
+.text-gray-400 { color: rgba(156, 163, 175, 1); }
+.bg-clip-text { -webkit-background-clip: text; background-clip: text; }
+
+/* Buttons */
 .gradient-btn {
-  background: linear-gradient(90deg, #3b82f6, #6366f1);
-  transition: all 0.3s ease;
+  background: linear-gradient(45deg, #3b82f6, #9333ea);
+  color: #fff;
+  transition: background 0.3s ease;
 }
 .gradient-btn:hover {
-  background: linear-gradient(90deg, #2563eb, #4f46e5);
-  box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
-}
-
-.gradient-btn {
-  background: linear-gradient(90deg, #3b82f6, #6366f1) !important;
-  color: #fff !important;
-  transition: all 0.3s ease;
-}
-.gradient-btn:hover {
-  background: linear-gradient(90deg, #2563eb, #4f46e5) !important;
+  background: linear-gradient(45deg, #60a5fa, #a78bfa);
   box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
 }
 .gradient-btn:disabled {
@@ -105,7 +90,32 @@ select {
   box-shadow: none;
 }
 
+/* Focus States */
+.focus\:outline-none:focus { outline: 2px solid transparent; outline-offset: 2px; }
+.focus\:ring-2:focus { box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5); }
+.focus\:ring-blue-400 { --tw-ring-color: rgba(96, 165, 250, 1); }
+.focus\:ring-indigo-400 { --tw-ring-color: rgba(129, 140, 248, 1); }
+.focus\:ring-purple-400 { --tw-ring-color: rgba(192, 132, 252, 1); }
 
+/* Dark Mode Overrides */
+.dark .bg-gray-900 { background-color: rgba(17, 24, 39, 1); }
+.dark .bg-gray-700 { background-color: rgba(55, 65, 81, 1); }
+.dark .border-gray-600 { border-color: rgba(75, 85, 99, 1); }
+.dark .text-gray-800 { color: rgba(31, 41, 55, 1); }
+.dark .text-gray-200 { color: rgba(229, 231, 235, 1); }
+.dark .text-gray-400 { color: rgba(156, 163, 175, 1); }
+.dark .text-gray-100 { color: rgba(243, 244, 246, 1); }
+.dark .bg-gradient-to-r {
+  background-image: linear-gradient(to right, #60a5fa, #a78bfa);
+}
 
-
-
+/* Positioning */
+.absolute { position: absolute; }
+.top-4 { top: 1rem; }
+.right-4 { right: 1rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.transition-colors {
+  transition-property: color, background-color, border-color;
+  transition-duration: .15s;
+}

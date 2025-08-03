@@ -74,3 +74,27 @@ textarea,
 select {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+/* Animated background gradient */
+.animated-bg {
+  background: linear-gradient(120deg, #eff6ff, #eef2ff, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Gradient button */
+.gradient-btn {
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  transition: all 0.3s ease;
+}
+.gradient-btn:hover {
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+}
+
+

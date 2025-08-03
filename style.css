@@ -74,13 +74,24 @@ label, input, select, textarea { display: block; box-sizing: border-box; }
 
 /* Buttons */
 .gradient-btn {
-  background: linear-gradient(45deg, #3b82f6, #9333ea);
-  color: #fff;
-  transition: background 0.3s ease;
+  background: #1d4ed8; /* fallback solid color */
+  background: linear-gradient(45deg, #1d4ed8, #6d28d9) !important;
+  color: #fff !important;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .gradient-btn:hover {
-  background: linear-gradient(45deg, #60a5fa, #a78bfa);
-  box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+  background: linear-gradient(45deg, #2563eb, #7e22ce) !important;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  transform: scale(1.03);
 }
 .gradient-btn:disabled {
   opacity: 0.6;
@@ -89,6 +100,7 @@ label, input, select, textarea { display: block; box-sizing: border-box; }
   color: #9ca3af !important;
   box-shadow: none;
 }
+
 
 /* Focus States */
 .focus\:outline-none:focus { outline: 2px solid transparent; outline-offset: 2px; }
@@ -119,3 +131,4 @@ label, input, select, textarea { display: block; box-sizing: border-box; }
   transition-property: color, background-color, border-color;
   transition-duration: .15s;
 }
+

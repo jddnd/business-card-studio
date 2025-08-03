@@ -181,3 +181,59 @@ textarea {
 
 /* Borders */
 .rounded-2xl { border-radius: 1rem; }
+
+/* ===========================
+   Custom Enhancements
+=========================== */
+
+/* Glass effect refinement */
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+}
+
+/* Smooth hover transition for interactive elements */
+button, .glass, .card {
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom focus ring */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Tailwind blue-500 */
+}
+
+/* Typography tweaks */
+h1, h2, h3 {
+  letter-spacing: -0.5px;
+}
+p {
+  line-height: 1.6;
+}
+
+/* Placeholder styling */
+::placeholder {
+  color: rgba(75, 85, 99, 0.8); /* Tailwind gray-600 */
+  font-style: italic;
+}
+
+/* Button hover states (override Tailwind for extra polish) */
+.bg-blue-500:hover {
+  background-color: #2563eb !important; /* Slightly darker */
+}
+.bg-green-500:hover {
+  background-color: #15803d !important;
+}
+.bg-purple-500:hover {
+  background-color: #6b21a8 !important;
+}
+
+

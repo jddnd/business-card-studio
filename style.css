@@ -97,5 +97,23 @@ select {
   box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
 }
 
+.gradient-btn {
+  background: linear-gradient(90deg, #3b82f6, #6366f1) !important;
+  color: #fff !important;
+  transition: all 0.3s ease;
+}
+.gradient-btn:hover {
+  background: linear-gradient(90deg, #2563eb, #4f46e5) !important;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+}
+.gradient-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #e5e7eb !important;
+  color: #9ca3af !important;
+  box-shadow: none;
+}
+
+
 
 

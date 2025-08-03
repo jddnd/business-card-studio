@@ -48,16 +48,7 @@ p {
   font-style: italic;
 }
 
-/* Button hover states (override Tailwind for smoother look) */
-.bg-blue-500:hover {
-  background-color: #2563eb !important; /* Slightly darker blue */
-}
-.bg-green-500:hover {
-  background-color: #15803d !important;
-}
-.bg-purple-500:hover {
-  background-color: #6b21a8 !important;
-}
+
 
 /* Add subtle hover scale for buttons */
 button:hover {
@@ -113,6 +104,7 @@ select {
   color: #9ca3af !important;
   box-shadow: none;
 }
+
 
 
 

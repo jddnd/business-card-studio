@@ -74,32 +74,34 @@ label, input, select, textarea { display: block; box-sizing: border-box; }
 
 /* Buttons */
 .gradient-btn {
-  background: #1d4ed8; /* fallback solid color */
-  background: linear-gradient(45deg, #1d4ed8, #6d28d9) !important;
-  color: #fff !important;
+  background: linear-gradient(135deg, #60a5fa, #818cf8, #a78bfa);
+  background-size: 200% 200%;
+  color: #fff;
   font-weight: 600;
   border: none;
-  border-radius: 0.75rem;
-  padding: 0.75rem;
+  border-radius: 9999px; /* pill shape */
+  padding: 0.85rem 1.5rem;
   width: 100%;
-  display: inline-block;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(129, 140, 248, 0.3);
 }
 .gradient-btn:hover {
-  background: linear-gradient(45deg, #2563eb, #7e22ce) !important;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-  transform: scale(1.03);
+  background-position: 100% 0; /* gradient animation */
+  box-shadow: 0 8px 20px rgba(129, 140, 248, 0.5);
+  transform: scale(1.05);
+}
+.gradient-btn:active {
+  transform: scale(0.98);
 }
 .gradient-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
-  background: #e5e7eb !important;
-  color: #9ca3af !important;
+  background: #9ca3af;
   box-shadow: none;
 }
+
 
 
 /* Focus States */
@@ -131,4 +133,5 @@ label, input, select, textarea { display: block; box-sizing: border-box; }
   transition-property: color, background-color, border-color;
   transition-duration: .15s;
 }
+
 

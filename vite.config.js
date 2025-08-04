@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0',
-    port: 5173,
-    allowedHosts: true // ✅ This allows all hosts (safe for Replit)
+    port: parseInt(process.env.PORT) || 5173,
+    allowedHosts: true
   },
 })
